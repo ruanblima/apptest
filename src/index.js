@@ -82,7 +82,7 @@ const Home = () => {
   };
   return (
     <S.Container>
-      <S.Text>Aplicação 1.0</S.Text>
+      <S.Text>Aplicação 2.0</S.Text>
 
       <S.ButtonDownload onPress={() => _onCheckServerVersion()}>
         <S.ButtonText>Atualizar APP</S.ButtonText>
