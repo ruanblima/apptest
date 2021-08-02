@@ -13,7 +13,7 @@ const Home = () => {
     updater.current = new UpdateAPK.UpdateAPK({
       iosAppId: '1104809018',
       apkVersionUrl:
-        'https://raw.githubusercontent.com/mikehardy/react-native-update-apk/master/example/test-version.json',
+        'https://raw.githubusercontent.com/ruanblima/apptest/master/src/json/testVersion.json',
 
       apkVersionOptions: {
         method: 'GET',
@@ -28,16 +28,12 @@ const Home = () => {
 
       needUpdateApp: performUpdate => {
         Alert.alert(
-          'Update Available',
-          'New version released, do you want to update? ' +
-            '(TESTING NOTE 1: stop your dev package server now - or the test package will try to load from it ' +
-            'instead of the included bundle leading to Javascript/Native incompatibilities.' +
-            'TESTING NOTE 2: the version is fixed at 1.0 so example test updates always work. ' +
-            'Compare the Last Update Times to verify it installed)',
+          'Atualização disponível',
+          'Nova atualização de teste disponível, deseja atualizar ?',
           [
             {text: 'Cancel', onPress: () => {}},
 
-            {text: 'Update', onPress: () => performUpdate(true)},
+            {text: 'Atualizar', onPress: () => performUpdate(true)},
             ,
           ],
         );
@@ -82,7 +78,7 @@ const Home = () => {
   };
   return (
     <S.Container>
-      <S.Text>Aplicação 2.0</S.Text>
+      <S.Text>Aplicação 1.0.0</S.Text>
 
       <S.ButtonDownload onPress={() => _onCheckServerVersion()}>
         <S.ButtonText>Atualizar APP</S.ButtonText>

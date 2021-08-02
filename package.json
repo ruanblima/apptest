@@ -9,13 +9,14 @@
     "test": "jest",
     "lint": "eslint .",
     "release": "cd android &&  ./gradlew app:assembleRelease",
-    "gc": "cd android && ./gradlew clean"
+    "gc": "cd android && ./gradlew clean",
+    "install-release": "cd android && adb install app/build/outputs/apk/release/app-release.apk"
   },
   "dependencies": {
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-fs": "^2.18.0",
-    "rn-update-apk": "^5.0.0",
+    "rn-update-apk": "https://github.com/mikehardy/react-native-update-apk.git",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
